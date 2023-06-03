@@ -40,7 +40,12 @@ export const ProductCard = ({ product }) => {
   const { name, _id, image, price, category, averageRating } = product;
   const { userData } = useUser();
   const navigate = useNavigate();
-  const { setSelectedProduct, rateProducts, getHomePageProducts, fetchDeleteProduct } = useProduct();
+  const {
+    setSelectedProduct,
+    rateProducts,
+    getHomePageProducts,
+    fetchDeleteProduct,
+  } = useProduct();
   const { addToCart, cartItems, removeFromCart } = useCart();
   // const {moreActionsAnchor, setMoreActionsAnchor } = useState(false)
 
@@ -70,7 +75,6 @@ export const ProductCard = ({ product }) => {
       url: `${category}${search}&size=1`,
     });
   };
-
 
   return (
     <>

@@ -3,7 +3,7 @@ import React from "react";
 
 export const Button = ({ children, onClick, ...rest }) => {
   return (
-    <MUIButton onClick={onClick} {...rest}>
+    <MUIButton sx={{color:"black" }} onClick={onClick} {...rest}>
       {children}
     </MUIButton>
   );

@@ -57,7 +57,7 @@ export const Header = ({ setDrawerOpen }) => {
           </Link>
           <SearchBar />
           <UserIcon />
-          <Button onClick={() => setIsCartOpen(true)}>
+          <Button  onClick={() => setIsCartOpen(true)}>
             <AiOutlineShoppingCart size={35} cursor={"pointer"} />
           </Button>
 

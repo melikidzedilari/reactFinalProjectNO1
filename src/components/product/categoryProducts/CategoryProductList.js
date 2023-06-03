@@ -5,6 +5,9 @@ import { useProduct, useQueryParams } from "../../../hooks";
 import { useParams } from "react-router-dom";
 import { Paginate } from "./Paginate";
 import { Sort } from "./Sort";
+import { styled } from "@mui/material";
+
+
 
 export const CategoryProductList = () => {
   const { categoryProducts, fetchCategoryProducts, isProductLoading } =
@@ -33,7 +36,7 @@ export const CategoryProductList = () => {
           return <ProductCard key={product._id} product={product} />;
         })}
       </GridContainer>
-      <Paginate totalPages={2} currentPage={page} changePage={changePage} />
+      <Paginate  totalPages={2} currentPage={page} changePage={changePage} />
     </LoadingWraper>
   );
 };

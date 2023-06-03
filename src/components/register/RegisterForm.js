@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, FormContainer } from "../atoms";
-import { Input } from "@mui/material"; 
+import { Input } from "@mui/material";
 import { useForm } from "../../hooks";
 import { generateRegisterFormValues } from "./generateRegisterFormValues";
 import { useUser } from "../../hooks";
@@ -31,6 +31,8 @@ export const RegisterForm = () => {
 
   return (
     <FormContainer>
+      <h1>register</h1>
+      <h4>firstName</h4>
       <Input
         name="firstName"
         label="firstname"
@@ -38,6 +40,7 @@ export const RegisterForm = () => {
         onChange={onRegisterInputChange}
         error={registerFormValues.firstName.error}
       />
+      <h4>lastName</h4>
       <Input
         name="lastName"
         label="lastname"
@@ -45,6 +48,7 @@ export const RegisterForm = () => {
         onChange={onRegisterInputChange}
         error={registerFormValues.lastName.error}
       />
+      <h4>email</h4>
       <Input
         name="email"
         label="email"
@@ -52,6 +56,7 @@ export const RegisterForm = () => {
         onChange={onRegisterInputChange}
         error={registerFormValues.email.error}
       />
+      <h4></h4>
       <Input
         type="password"
         name="password"

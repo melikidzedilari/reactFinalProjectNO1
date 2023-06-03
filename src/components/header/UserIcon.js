@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { getUserInitials } from "../../helpers/getUserInitials";
 import { useUser } from "../../hooks";
 import { Button } from "../atoms";
-import {FaUser} from "react-icons/fa"
+import { FaUser } from "react-icons/fa";
 
 import { useNavigate } from "react-router";
 import { isUserAdmin } from "../../helpers";
@@ -12,8 +12,6 @@ const StyledBox = styled(Box)(() => ({
   display: "flex",
   flexDirection: "column",
   borderRadius: 10,
-  
-
 }));
 
 export const UserIcon = () => {
@@ -27,7 +25,6 @@ export const UserIcon = () => {
           <FaUser size={30} color="black"></FaUser>
           {getUserInitials(userData?.firstname, userData?.lastname)}
         </Avatar>
-  
       </IconButton>
       <Menu
         anchorEl={anchor}
@@ -58,7 +55,7 @@ export const UserIcon = () => {
                         setAnchor(null);
                       }}
                     >
-                      add product
+                      addProduct
                     </Button>
                   )}
                 </MenuItem>
