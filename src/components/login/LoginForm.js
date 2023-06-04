@@ -14,7 +14,6 @@ export const LoginForm = () => {
     const email = loginFormValues.email.value;
     const password = loginFormValues.password.value;
     authenticateUser({ formValues: { email, password }, isLogin: true });
-    console.log(onLogin);
   };
 
   return (
@@ -24,7 +23,7 @@ export const LoginForm = () => {
         label="email"
         value={loginFormValues.email.value}
         onChange={onLoginFormChange}
-        error={loginFormValues.email.value}
+        error={loginFormValues.email.error}
       />
       <Input
         type="password"

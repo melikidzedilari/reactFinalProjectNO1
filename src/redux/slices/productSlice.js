@@ -75,21 +75,6 @@ export const rateProduct = createAsyncThunk(
   }
 );
 
-
-
-
-// export const fetchDeleteProduct = createAsyncThunk(
-//   "product/deleteProduct",
-//   async (id , { rejectWithValue }) => {
-//     try {
-//       const { data } = await axiosInstance.delete(`/products/${id})`);
-//       return data;
-//     } catch (error) {
-//       return rejectWithValue("couldnot delete product");
-//     }
-//   }
-// );
-
 export const queryProducts = createAsyncThunk(
   "product/queryProducts",
   async (searchValue, { rejectWithValue }) => {
@@ -119,7 +104,6 @@ const productSlice = createSlice({
     },
     singleProduct: null,
     searchResults: [],
-   
   },
   reducers: {
     setSelectedProduct: (state, action) => {
@@ -187,17 +171,6 @@ const productSlice = createSlice({
       state.loading = false;
       state.error = action.payload;
     });
-    // builder.addCase(fetchDeleteProduct.pending, (state) => {
-    //   state.loading = true;
-    // });
-    // builder.addCase(fetchDeleteProduct.fulfilled, (state, action) => {
-    //   state.loading = false;
-    //   state.deleteProduct = action.payload.products;
-    // });
-    // builder.addCase(fetchDeleteProduct.rejected, (state, action) => {
-    //   state.loading = false;
-    //   state.error = action.payload;
-    // });
   },
 });
 

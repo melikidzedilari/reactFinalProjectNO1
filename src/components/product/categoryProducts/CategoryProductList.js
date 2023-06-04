@@ -5,7 +5,7 @@ import { useProduct, useQueryParams } from "../../../hooks";
 import { useParams } from "react-router-dom";
 import { Paginate } from "./Paginate";
 import { Sort } from "./Sort";
-import { styled } from "@mui/material";
+
 
 
 

@@ -28,11 +28,7 @@ const StyledToolbar = styled(Toolbar)(() => ({
   width: "100%",
 }));
 
-// const StyledLink = styled(Link)(() => ({
-//   textDecoration: "none",
-//   color: "black",
-//   display: "flex",
-// }));
+
 
 export const Header = ({ setDrawerOpen }) => {
   const [isCartOpen, setIsCartOpen] = useState();

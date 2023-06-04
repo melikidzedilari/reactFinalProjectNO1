@@ -1,5 +1,5 @@
 export { authenticateUser, userReducer, logout } from "./userSlice";
-// export { userReducer } from "./userSlice";
+
 export {
   productReducer,
   saveProduct,
@@ -9,7 +9,6 @@ export {
   queryProducts,
   rateProduct,
   fetchSingleProduct,
-  // fetchDeleteProduct,
   clearSearchResults,
 } from "./productSlice";
 

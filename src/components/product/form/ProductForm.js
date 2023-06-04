@@ -4,7 +4,7 @@ import { useForm } from "../../../hooks";
 import { generateProductFormValues } from "./generateProductFormValues";
 import FileBase64 from "react-file-base64";
 import { useProduct } from "../../../hooks";
-import { useNavigate } from "react-router-dom";
+
 
 export const ProductForm = () => {
   const {
@@ -40,10 +40,7 @@ export const ProductForm = () => {
 
   return (
     <FormContainer>
-      <img
-        src=""
-        style={{ objectFit: "cover", width: "100%", height: "200px" }}
-      />
+     
       <Input
         name="name"
         value={productFormValues.name.value}

@@ -35,7 +35,7 @@ export const SingleProductCard = ({ product }) => {
         <Text variant="h4">{description}</Text>
       </Box>
 
-      <Button
+      <Button 
         sx={{
           marginTop: "650px",
           position: "absolute",

@@ -2,7 +2,7 @@ import { Drawer } from "@mui/material";
 import React from "react";
 import { SideBarContent } from "./SideBarContent";
 import { useProduct } from "../../hooks";
-import { SidebarHeader } from "./SidebarHeader";
+
 
 export const SideBar = ({ isDrawerOpen, setDrawerOpen }) => {
   const { categories } = useProduct();

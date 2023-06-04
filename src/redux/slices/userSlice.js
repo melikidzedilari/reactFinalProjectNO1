@@ -16,7 +16,7 @@ export const authenticateUser = createAsyncThunk(
     }
   }
 );
-// console.log(authenticateUser);
+
 
 const userSlice = createSlice({
   name: "user",

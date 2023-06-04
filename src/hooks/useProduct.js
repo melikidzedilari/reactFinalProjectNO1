@@ -6,7 +6,6 @@ import {
   saveProduct as saveProductHandler,
   setSelectedProduct as selectProduct,
   rateProduct,
-  // fetchDeleteProduct as fetchClearProduct,
   queryProducts,
   clearSearchResults as clearQueryResults,
 } from "../redux/slices";
@@ -29,9 +28,6 @@ export const useProduct = () => {
 
   const searchResults = useSelector((state) => state.product.searchResults);
 
-  // const deleteProduct = useSelector((state) => state.product.deleteProduct)
-
-
   const categoryProducts = useSelector(
     (state) => state.product.categoryProducts
   );
@@ -53,9 +49,6 @@ export const useProduct = () => {
   const getSingleProduct = (data) => {
     dispatch(fetchSingleProduct(data));
   };
-  // const fetchDeleteProduct = (data) => {
-  //   dispatch(fetchClearProduct(data));
-  // }
 
   const saveProduct = (data) => {
     console.log(data, "data");
@@ -95,8 +88,6 @@ export const useProduct = () => {
     categories,
     categoryProducts,
     fetchCategoryProducts,
-    // fetchDeleteProduct,
-    // deleteProduct,
     getSingleProduct,
     rateProducts,
     searchProducts,

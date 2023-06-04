@@ -6,7 +6,7 @@ import { useCart, useUser } from "../../../hooks";
 import { useLocation, useNavigate } from "react-router";
 import { useProduct } from "../../../hooks";
 import { Link } from "../../atoms";
-import { fetchDeleteProducts } from "../../../redux/slices";
+
 
 const StyledCard = styled(Card)(() => ({
   marginTop: "50px",
@@ -17,10 +17,7 @@ const StyledCard = styled(Card)(() => ({
   borderRadius: 10,
 }));
 
-// const StyledLink = styled(Link)(() => ({
-//   textDecoration: "none",
-//   color: "black",
-// }));
+
 
 const StyledInfoContainer = styled(Box)(() => ({
   display: "flex",
@@ -47,7 +44,7 @@ export const ProductCard = ({ product }) => {
     fetchDeleteProduct,
   } = useProduct();
   const { addToCart, cartItems, removeFromCart } = useCart();
-  // const {moreActionsAnchor, setMoreActionsAnchor } = useState(false)
+
 
   const { pathname, search } = useLocation();
 
@@ -99,12 +96,7 @@ export const ProductCard = ({ product }) => {
               alignItems: "self-start",
             }}
           >
-            {/* <RateProduct
-              value={averageRating}
-              userData={userData}
-              onChange={rateProducts}
-              product={product}
-            /> */}
+       
             <Rating
               value={averageRating}
               disabled={!userData}
@@ -127,8 +119,9 @@ export const ProductCard = ({ product }) => {
               {/* <Button>removetoCart</Button> */}
 
               {isUserAdmin(userData) && <Button onClick={onEdit}>edit</Button>}
-
-              {<Button onClick={() => deleteProduct(_id)}>delete</Button>}
+              {isUserAdmin(userData) && (
+                <Button onClick={() => deleteProduct(_id)}>delete</Button>
+              )}
             </StyledCardActionsContainer>
           </CardActions>
         </StyledCard>
