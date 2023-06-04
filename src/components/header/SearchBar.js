@@ -6,15 +6,15 @@ import { useProduct } from "../../hooks";
 
 export const SearchBar = () => {
   const [searchQuery, setSearchQuery] = useState();
-  const { searchProducts, searchResults, clearSearchResults } = useProduct();
+  const { searchProducts, searchResults, clearSearchResults, getHomePageProducts } = useProduct();
 
   useEffect(() => {
     const timerId = setTimeout(() => {
       if (searchQuery) {
-        console.log("gaagzavne");
         searchProducts(searchQuery);
       } else {
         clearSearchResults();
+        getHomePageProducts()
       }
     }, 500);
     return () => {

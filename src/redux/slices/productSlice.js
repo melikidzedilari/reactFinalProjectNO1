@@ -80,7 +80,7 @@ export const queryProducts = createAsyncThunk(
   async (searchValue, { rejectWithValue }) => {
     try {
       const { data } = await axiosInstance.get(
-        `/products/?name=${searchValue}`
+        `/products/search?name=${searchValue}`
       );
       return data;
     } catch (error) {
@@ -165,6 +165,7 @@ const productSlice = createSlice({
     });
     builder.addCase(queryProducts.fulfilled, (state, action) => {
       state.loading = false;
+      state.homePageProducts = action.payload.products;
       state.searchResults = action.payload.products;
     });
     builder.addCase(queryProducts.rejected, (state, action) => {
