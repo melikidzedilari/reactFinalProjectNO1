@@ -7,7 +7,6 @@ import { useLocation, useNavigate } from "react-router";
 import { useProduct } from "../../../hooks";
 import { Link } from "../../atoms";
 
-
 const StyledCard = styled(Card)(() => ({
   marginTop: "50px",
   margin: "50px",
@@ -16,8 +15,6 @@ const StyledCard = styled(Card)(() => ({
   width: 350,
   borderRadius: 10,
 }));
-
-
 
 const StyledInfoContainer = styled(Box)(() => ({
   display: "flex",
@@ -37,14 +34,9 @@ export const ProductCard = ({ product }) => {
   const { name, _id, image, price, category, averageRating } = product;
   const { userData } = useUser();
   const navigate = useNavigate();
-  const {
-    setSelectedProduct,
-    rateProducts,
-    getHomePageProducts,
-    fetchDeleteProduct,
-  } = useProduct();
+  const { setSelectedProduct, rateProducts, getHomePageProducts } =
+    useProduct();
   const { addToCart, cartItems, removeFromCart } = useCart();
-
 
   const { pathname, search } = useLocation();
 
@@ -96,7 +88,6 @@ export const ProductCard = ({ product }) => {
               alignItems: "self-start",
             }}
           >
-       
             <Rating
               value={averageRating}
               disabled={!userData}

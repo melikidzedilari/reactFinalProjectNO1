@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { LoadingWraper, GridContainer } from "../../atoms";
-import { ProductCard } from "../form/ProductCard";
+import { ProductCard } from "./ProductCard";
 import { useProduct, useQueryParams } from "../../../hooks";
 import { useParams } from "react-router-dom";
 import { Paginate } from "./Paginate";

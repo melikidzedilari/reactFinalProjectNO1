@@ -25,14 +25,14 @@ export const SingleProductCard = ({ product }) => {
     <StyledBox>
       <StyledImage src={image} />
       <Box>
-        <h5>name</h5>
-        <Text variant="h4">{name}</Text>
-        <h5>category</h5>
-        <Text variant="h4">{category}</Text>
-        <h5>brand</h5>
-        <Text variant="h4">{brand}</Text>
-        <h5>description</h5>
-        <Text variant="h4">{description}</Text>
+        <Text variant="h5">name</Text>
+        <Text variant="h3">{name}</Text>
+        <Text variant="h5">category</Text>
+        <Text variant="h3">{category}</Text>
+        <Text variant="h5">brand</Text>
+        <Text variant="h3">{brand}</Text>
+        <Text variant="h5">description</Text>
+        <Text variant="h3">{description}</Text>
       </Box>
 
       <Button 
